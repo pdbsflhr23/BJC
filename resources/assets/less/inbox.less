@@ -1,0 +1,88 @@
+.inbox-sidebar-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    .inbox-sidebar-icon {
+        width: 18px;
+        text-align: center;
+        margin-left: 3px;
+        margin-right: 4px;
+    }
+    .inbox-sidebar-compose {
+        margin-bottom:20px;
+    }
+    .inbox-sidebar-item {
+        font-size: 14px;
+        a {
+            display: block;
+            color: #fff;
+            padding: 8px 2px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            &:hover {
+                background: rgba(255, 255, 255, 0.04);
+            }
+        }
+        &:last-child {
+            a {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+        &.active {
+            a {
+                background: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+    .inbox-sidebar-labels {
+        font-size: 16px;
+        .label {
+            line-height: 28px;
+        }
+    }
+    .inbox-sidebar-tag {
+        font-size: 14px;
+        a {
+            display: block;
+            color: #fff;
+            padding: 8px 2px;
+            &:hover {
+                background: rgba(255, 255, 255, 0.04);
+            }
+        }
+        &:last-child {
+            a {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+.inbox-sidebar-heading {
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    color: #DDD;
+}
+.inbox-sidebar-heading {
+    h1,h2,h3,h4,h5,h6 {
+        .inbox-sidebar-heading;
+    }
+}
+.inbox-search-input {
+    border-right: 0;
+    &:active, &:focus {
+        border-right: 0;
+    }
+}
+.inbox-main-heading {
+    margin-top: 7px;
+    .form-inline {
+        margin-top: -4px;
+        .form-group {
+            margin-right: 0;
+        }
+    }
+}
+.inbox-actions {
+    margin-top: 25px;
+}

@@ -1,0 +1,266 @@
+.main-transition() {
+	transition: @default-skin-main-transition;
+}
+
+.widget-dark-variant(@variant-bg-color) {
+    border: 1px solid darken(@variant-bg-color, 10%);
+    border-top: @widget-top-border-thickness solid darken(@variant-bg-color, 11%);
+    background: @variant-bg-color;
+    color: lighten(@variant-bg-color, 90%);
+    .help-block {
+        color: lighten(@variant-bg-color, 25%);
+    }
+    .widget-header {
+        border-bottom: 1px solid darken(@variant-bg-color, 5%);
+        color: lighten(@variant-bg-color, 90%);
+        .widget-header-actions {
+            .widget-header-action {
+                color: lighten(@variant-bg-color, 20%);
+                cursor: pointer;
+                &:hover, &:active {
+                    color: lighten(@variant-bg-color, 60%);
+                }
+            }
+        }
+    }
+    &.widget-fluctuation {
+        .widget-fluctuation-period {
+            .widget-fluctuation-period-text {
+                color: lighten(@variant-bg-color, 70%);
+                strong {
+                    color: lighten(@variant-bg-color, 90%);
+                }
+            }
+        }
+        .widget-fluctuation-description {
+            color: lighten(@variant-bg-color, 80%);
+            .widget-fluctuation-description-text {
+                color: lighten(@variant-bg-color, 47%);
+            }
+        }
+    }
+    &.widget-statistic {
+        .widget-statistic-header {
+            font-size: 14px;
+            color: lighten(@variant-bg-color, 40%);
+        }
+        .widget-statistic-body {
+            .widget-statistic-value {
+                color: #fff;
+                font-weight: 300;
+            }
+
+            .widget-statistic-description {
+                color: lighten(@variant-bg-color, 40%);
+            }
+
+            .widget-statistic-icon {
+                color: lighten(@variant-bg-color, 7%);
+            }
+        }
+    }
+}
+
+.widget-light-variant(@variant-bg-color) {
+    border: 1px solid darken(@variant-bg-color, 22%);
+    border-top: @widget-top-border-thickness solid darken(@variant-bg-color, 22%);
+    background: @variant-bg-color;
+    .help-block {
+        color: darken(@variant-bg-color, 35%);
+    }
+    .widget-header {
+        border-bottom: 1px solid darken(@variant-bg-color, 13%);
+        color: darken(@variant-bg-color, 90%);
+        .widget-header-actions {
+            .widget-header-action {
+                color: darken(@variant-bg-color, 40%);
+                cursor: pointer;
+                &:hover, &:active {
+                    color: darken(@variant-bg-color, 80%);
+                }
+            }
+        }
+    }
+    &.widget-fluctuation {
+        .widget-fluctuation-period {
+            .widget-fluctuation-period-text {
+                color: darken(@variant-bg-color, 70%);
+                strong {
+                    color: darken(@variant-bg-color, 90%);
+                }
+            }
+        }
+        .widget-fluctuation-description {
+            .widget-fluctuation-description-amount {
+                color: darken(@variant-bg-color, 80%);
+            }
+            .widget-fluctuation-description-text {
+                color: darken(@variant-bg-color, 40%);
+            }
+        }
+    }
+    .widget-body {
+        color: darken(@variant-bg-color, 80%);
+    }
+    &.widget-statistic {
+        .widget-statistic-header {
+            font-size: 14px;
+            color: darken(@variant-bg-color, 40%);
+        }
+        .widget-statistic-body {
+            .widget-statistic-value {
+                color: #333;
+                font-weight: 300;
+            }
+
+            .widget-statistic-description {
+                color: darken(@variant-bg-color, 40%);
+            }
+
+            .widget-statistic-icon {
+                color: darken(@variant-bg-color, 7%);
+            }
+        }
+    }
+}
+
+    .btn-transparent-variant(@transparent-button-colour, @hover-text-color: #fff) {
+        border-color: lighten(@transparent-button-colour, 5%);
+
+        &:hover {
+            border-color: @transparent-button-colour;
+          background-color: @transparent-button-colour;
+          color: @hover-text-color;
+        }
+    }
+
+    .full-dark-skin(@skin-primary-colour) {
+        .progress-bar-primary {
+            .progress-bar-variant(darken(@skin-primary-colour, 5%));
+        }
+        .alert-primary {
+            .alert-variant(darken(@skin-primary-colour, 5%), darken(@skin-primary-colour, 20%), #fff);
+        }
+        .badge {
+            &.badge-primary {
+                background-color: @skin-primary-colour;
+            }
+        }
+        .btn.btn-transparent {
+          &.btn-transparent-primary {
+            .btn-transparent-variant(@skin-primary-colour);
+        }
+    }
+    .fc .fc-event {
+        border-color: darken(@skin-primary-colour, 4%);
+        background-color: @skin-primary-colour;
+    }
+
+    #external-events .fc-event {
+        border-color: darken(@skin-primary-colour, 4%);
+        background-color: @skin-primary-colour;
+    }
+    .show-grid {
+        [class^=col-] {
+            background-color: fade(@skin-primary-colour, 25%);
+            border-color: fade(@skin-primary-colour, 35%);
+        }
+    }
+
+    .label {
+        &.label-primary {
+            .label-variant(@skin-primary-colour);
+        }
+    }
+
+    .list-group {
+        .list-group-item {
+            &.active {
+                background-color: @skin-primary-colour;
+                border-color: darken(@skin-primary-colour, 10%);
+                &:hover, &:focus {
+                    background-color: lighten(@skin-primary-colour, 5%);
+                }
+            }
+        }
+
+        .list-group-item-variant('primary', @skin-primary-colour, #fff);
+    }
+
+    .pagination {
+        > li {
+            &.active {
+                > a {
+                    background: darken(@skin-primary-colour, 10%);
+                    border-color: darken(@skin-primary-colour, 15%);
+                    &:hover, &:focus {
+                        background: darken(@skin-primary-colour, 10%);
+                        border-color: darken(@skin-primary-colour, 15%);
+                    }
+                }
+            }
+        }
+    }
+
+    .pager {
+        > li {
+            &.active {
+                > a {
+                    background: darken(@skin-primary-colour, 10%);
+                    border-color: darken(@skin-primary-colour, 15%);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .panel-primary {
+        .panel-variant(darken(@brand-default, 10%), #fff, darken(@skin-primary-colour, 5%), darken(@skin-primary-colour, 10%));
+    }
+
+    .left-sidebar {
+        .sidebar-nav {
+            .sidebar-nav-link {
+                &.active, &.open {
+                    > a {
+                        border-left: @skin-primary-colour 3px solid;
+                    }
+                }
+                > .sidebar-nav {
+                    .sidebar-nav-link {
+                        &.active {
+                            a {
+                                border-color: darken(@skin-primary-colour, 10%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .text-primary {
+      color: lighten(@skin-primary-colour, 10%) !important;
+    }
+    .bg-primary {
+      .bg-variant(@skin-primary-colour);
+    }
+    .widget {
+        &.widget-primary {
+            .widget-dark-variant(darken(@skin-primary-colour, 8%));
+        }
+    }
+
+
+    .btn-primary {  
+      .button-variant(#fff; @skin-primary-colour; darken(@skin-primary-colour, 10%));
+    }
+
+    ::-moz-selection {
+        background: fade(@skin-primary-colour, 45%);
+    }
+    ::selection {
+        background: fade(@skin-primary-colour, 45%);
+    }
+}

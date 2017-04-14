@@ -1,0 +1,44 @@
+.label {
+    line-height: 12px;
+    font-weight: 500;
+    &.label-default {
+        background-color: #fff;
+        color: #333;
+    }
+
+    &.label-dark {
+        .label-variant(darken(@brand-default, 8%));
+    }
+
+    &.label-primary {
+        .label-variant(@brand-primary);
+    }
+
+    &.label-success {
+        .label-variant(@brand-success);
+    }
+
+    &.label-info {
+        .label-variant(@brand-info);
+    }
+
+    &.label-warning {
+        .label-variant(@brand-warning);
+    }
+
+    &.label-danger {
+        .label-variant(@brand-danger);
+    }
+
+    &.label-purple {
+        .label-variant(@brand-purple);
+    }
+
+    &.label-pink {
+        .label-variant(@brand-pink);
+    }
+
+    &.label-faded-blue {
+        .label-variant(@brand-faded-blue);
+    }
+}

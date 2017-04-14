@@ -1,0 +1,64 @@
+.table>thead>tr>th {
+    border-bottom: 2px solid @dark-skin-table-border-color;
+}
+.table>tbody>tr>td, .table>tbody>tr>th {
+    border-bottom: 1px solid @dark-skin-table-border-color;
+}
+.table-responsive {
+    border: 0;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: rgba(255,255,255,0.1);
+}
+.table-bordered {
+    border: 1px solid @dark-skin-table-border-color;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid @dark-skin-table-border-color;
+}
+.table-row-checkbox {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: 2px;
+
+}
+.table-vertical-align-middle {
+    td, th {
+        vertical-align: middle;
+    }
+}
+.table-hover {
+    tbody {
+        tr {
+            &:hover {
+                background-color: rgba(255,255,255,0.18);
+            }
+        }
+    }
+}
+
+.table-row-variant(active; rgba(255,255,255,0.18));
+.table-row-variant(success; fade(@brand-success, 35%));
+.table-row-variant(info; fade(@brand-info, 35%));
+.table-row-variant(warning; fade(@brand-warning, 35%));
+.table-row-variant(danger; fade(@brand-danger, 35%));
+
+.table {
+    &.table-inbox {
+        td, th {
+            padding-left: 17px;
+            padding-right: 17px;
+            font-size: 18px;
+            a {
+                color: #fff;
+            }
+        }
+        .table-inbox-row-unread {
+            td, th {
+                font-weight: 600;
+            }
+            background: rgba(255,255,255,0.06);
+        }
+    }
+}

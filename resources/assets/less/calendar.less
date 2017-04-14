@@ -1,0 +1,51 @@
+.fc .fc-event {
+    transition: none;
+    border: 1px solid darken(@brand-primary, 4%);
+    background-color: @brand-primary;
+}
+
+.fc a.fc-event {
+    transition: none;
+}
+
+.fc td.fc-today {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.fc .fc-state-default {
+    .main-transition();
+    border: 1px solid #fff;
+    background: rgba(255,255,255,0);
+    color: #fff;
+    text-shadow: none;
+    box-shadow: none;
+    &:hover {
+        background: rgba(255,255,255,0.1);
+    }
+    &:active, &:focus {
+        outline: none;
+    }
+}
+        
+#external-events .fc-event {
+    margin: 10px 0;
+    cursor: pointer;
+    border: 1px solid darken(@brand-primary, 4%);
+    background-color: @brand-primary;
+}
+    
+#external-events p {
+    margin: 1.5em 0;
+    font-size: 11px;
+    color: #666;
+}
+    
+#external-events p input {
+    margin: 0;
+    vertical-align: middle;
+}
+
+
+.fc button.fc-button {
+    height: 2.2em;
+}

@@ -1,0 +1,35 @@
+.alert {
+    font-size: 16px;
+    line-height: 16px;
+}
+.close {
+    .main-transition();
+    &:hover {
+        color: rgba(255,255,255,1);
+        opacity: 1;
+    }
+}
+.alert-success {
+    .alert-variant(darken(@brand-success, 5%), darken(@brand-success, 20%), #fff);
+}
+.alert-info {
+    .alert-variant(darken(@brand-info, 5%), darken(@brand-info, 20%), #fff);
+}
+.alert-warning {
+    .alert-variant(darken(@brand-warning, 5%), darken(@brand-warning, 20%), #fff);
+}
+.alert-danger {
+    .alert-variant(darken(@brand-danger, 5%), darken(@brand-danger, 20%), #fff);
+}
+.alert-primary {
+    .alert-variant(darken(@brand-primary, 5%), darken(@brand-primary, 20%), #fff);
+}
+.alert-purple {
+    .alert-variant(darken(@brand-purple, 5%), darken(@brand-purple, 20%), #fff);
+}
+.alert-pink {
+    .alert-variant(darken(@brand-pink, 5%), darken(@brand-pink, 20%), #fff);
+}
+.alert-faded-blue {
+    .alert-variant(darken(@brand-faded-blue, 5%), darken(@brand-faded-blue, 20%), #fff);
+}

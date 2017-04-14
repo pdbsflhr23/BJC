@@ -1,0 +1,57 @@
+.panel {
+    background: @brand-default;
+    border-radius: 0;
+    border: 1px solid darken(@brand-default, 10%);
+
+    .panel-footer {
+        background: darken(@brand-default, 3%);
+        border-top: darken(@brand-default, 10%);
+        border-radius: 0;
+    }
+    .panel-heading {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+.panel>.panel-body+.table, .panel>.panel-body+.table-responsive, .panel>.table+.panel-body, .panel>.table-responsive+.panel-body {
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+.panel-default {
+    .panel-heading {
+        background: darken(@brand-default, 4%);
+        border-color: darken(@brand-default, 10%);
+        color: #fff;
+    }
+}
+
+.panel-primary {
+    .panel-variant(darken(@brand-default, 10%), #fff, darken(@brand-primary, 5%), darken(@brand-primary, 10%));
+}
+
+.panel-success {
+    .panel-variant(darken(@brand-default, 10%), #fff, darken(@brand-success, 5%), darken(@brand-success, 10%));
+}
+
+.panel-info {
+    .panel-variant(darken(@brand-default, 10%), #fff, darken(@brand-info, 5%), darken(@brand-info, 10%));
+}
+
+.panel-warning {
+    .panel-variant(darken(@brand-default, 10%), #fff, darken(@brand-warning, 5%), darken(@brand-warning, 10%));
+}
+
+.panel-danger {
+    .panel-variant(darken(@brand-default, 10%), #fff, darken(@brand-danger, 5%), darken(@brand-danger, 10%));
+}
+
+.panel-purple {
+    .panel-variant(darken(@brand-default, 10%), #fff, darken(@brand-purple, 5%), darken(@brand-purple, 10%));
+}
+
+.panel-pink {
+    .panel-variant(darken(@brand-default, 10%), #fff, darken(@brand-pink, 5%), darken(@brand-pink, 10%));
+}
+
+.panel-faded-blue {
+    .panel-variant(darken(@brand-default, 10%), #fff, darken(@brand-faded-blue, 5%), darken(@brand-faded-blue, 10%));
+}

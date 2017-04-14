@@ -1,0 +1,180 @@
+.navbar {
+    min-height: @navbar-height;
+    .navbar-nav {
+        margin: 0;
+    }
+    margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
+
+    &.navbar-default .navbar-nav>.open>a, &.navbar-default .navbar-nav>.open>a:focus, &.navbar-default .navbar-nav>.open>a:hover {
+        background-color: lighten(@default-skin-navbar-bg, 5%);
+        color: #fff;
+    }
+
+    .navbar-header {
+        margin-right: 0;
+        margin-left: 0;
+        float: left;
+    }
+
+    .navbar-sidebar-toggle, .navbar-toggle {
+        .main-transition();
+        .navbar-vertical-align(56);
+        float: left;
+        background: @default-skin-navbar-bg;
+        margin-left: -@grid-gutter-width;
+        margin-right: 0;
+        border: 0;
+        border-radius: 0;
+        border-right: 1px solid @default-skin-sidebar-bg;
+        padding: 7px 19px;
+        font-size: 39px;
+        line-height: 36px;
+        &:hover, &:active {
+            background: @default-skin-sidebar-bg;
+            outline: none;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .navbar-search-form {
+        min-width: 195px;
+        height: 24px;
+        .navbar-vertical-align(24px);
+
+        .navbar-search-btn, .navbar-search-box {
+            .main-transition();
+            color: #848c90;
+            background: none;
+            border: none;
+            font-size: 15px;
+            &:focus, &:hover, &:active {
+                color: #fff;
+            }
+            outline: none;
+        }
+        .navbar-search-box {
+            width: 112px;
+            font-size: 15px;
+        }
+    }
+    .navbar-sidebar-toggle {
+        margin-right: 15px;
+    }
+
+    .navbar-nav > li > a {
+        // line-height: 21px;
+        padding: @nav-link-padding;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    &.navbar-default {
+        background: @default-skin-navbar-bg;
+        .navbar-collapse, .navbar-search-form {
+            border: 0;
+            border-color: #fff;
+            box-shadow: none;
+        }
+        .navbar-collapse {
+            margin-top: 0;
+        }
+        .navbar-nav > li > a {
+            // line-height: 21px;
+            color: @default-skin-navbar-text-color;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+        .navbar-nav > li {
+            &.item-feed {
+                > a {
+                    padding-right: 25px;
+                }
+                .item-feed-badge {
+                    position: absolute;
+                    top: 9px;
+                    left: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @grid-float-breakpoint) {
+    .navbar {
+        .navbar-right {
+            float: right;
+        }
+        .navbar-left {
+            float: left;
+        }
+        .navbar-nav li {
+            float: left;
+        }
+    }
+
+    .navbar {
+        .navbar-search-form {
+            .navbar-search-btn, .navbar-search-box {
+                float: left;
+                padding-left: 3px;
+                padding-right: 12px;
+            }
+            .navbar-search-box {
+                float: left;
+                width: 85%;
+            }
+        }
+        &.navbar-default {
+            .navbar-nav > li {
+                &.item-feed {
+                    .item-feed-badge {
+                        // top: 5px;
+                        // left: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: 768px) {
+    .dropdown-menu-messages, .dropdown-menu-notifications, .navbar-default .navbar-nav .open .dropdown-menu {
+        .dropdown-menu-messages();
+        position: absolute;
+        left: 0;
+        right: auto;
+        width: 100% !important;
+        border-color: #414546 !important;
+        background-color: @default-skin-navbar-bg;
+        padding: 0 !important;
+        > li > a {
+            color: #fff;
+            &:hover {
+                background-color: lighten(@default-skin-navbar-bg, 10%);
+                color: #fff;
+            }
+        }
+
+        li:first-child  .dropdown-menu-messages-item {
+            padding-top: 12px;
+        }
+    }
+}
+
+@media (max-width: 485px) {
+    .navbar {
+        .navbar-search-form {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: @grid-float-breakpoint + 1) {
+    .navbar-sidebar-toggle{
+        display: block;
+    }
+}

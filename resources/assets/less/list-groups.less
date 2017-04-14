@@ -1,0 +1,50 @@
+.list-group {
+    border-radius: 0;
+    border-color: darken(@brand-default, 10%);
+    .list-group-item {
+        border-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: @brand-default;
+        border-color: darken(@brand-default, 10%);
+        color: #fff;
+        &.active {
+            background-color: @brand-primary;
+            border-color: darken(@brand-primary, 10%);
+            &:hover, &:focus {
+                background-color: lighten(@brand-primary, 5%);
+            }
+        }
+        &.disabled {
+            color: #ccc;
+            .list-group-item-text {
+                color: #ccc;
+            }
+        }
+        &:hover, &:focus {
+            background-color: lighten(@brand-default, 5%);
+            color: #fff;
+        }
+        .list-group-item-icon {
+            width: 20px;
+            text-align: center;
+            margin-right: 5px;
+        }
+    }
+    .list-group-item-variant('primary', @brand-primary, #fff);
+    .list-group-item-variant('success', @brand-success, #fff);
+    .list-group-item-variant('info', @brand-info, #fff);
+    .list-group-item-variant('danger', @brand-danger, #fff);
+
+    span {
+            &.list-group-item {
+            cursor: default;
+                &:hover {
+                    background-color: @brand-default;
+                    color: #fff;
+                }
+        }
+    }
+}

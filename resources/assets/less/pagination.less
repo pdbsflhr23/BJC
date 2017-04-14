@@ -1,0 +1,79 @@
+.pagination {
+    > li {
+        &.active {
+            > a {
+                background: darken(@brand-primary, 10%);
+                border-color: darken(@brand-primary, 15%);
+                color: #fff;
+                &:hover, &:focus {
+                    background: darken(@brand-primary, 10%);
+                    border-color: darken(@brand-primary, 15%);
+                    color: #fff;
+                }
+            }
+        }
+        &.disabled {
+            > a {
+                background: darken(@brand-default, 5%);
+                border-color: darken(@brand-default, 15%);
+                color: #999;
+                &:hover, &:focus {
+                    background: darken(@brand-default, 5%);
+                    border-color: darken(@brand-default, 15%);
+                    color: #999;
+                }
+            }
+        }
+        > a {
+            background: darken(@brand-default, 5%);
+            border-color: darken(@brand-default, 15%);
+            color: lighten(@link-color, 10%);
+            &:last-child {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &:first-child {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            &:hover, &:focus {
+                background: @brand-default;
+                color: lighten(@link-color, 15%);
+                border-color: darken(@brand-default, 10%);
+            }
+        }
+    }
+}
+.pager {
+    > li {
+        &.active {
+            > a {
+                background: darken(@brand-primary, 10%);
+                border-color: darken(@brand-primary, 15%);
+                color: #fff;
+            }
+        }
+        &.disabled {
+            > a {
+                background: darken(@brand-default, 5%);
+                border-color: darken(@brand-default, 15%);
+                color: #999;
+                &:hover, &:focus {
+                    background: darken(@brand-default, 5%);
+                    border-color: darken(@brand-default, 15%);
+                    color: #999;
+                }
+            }
+        }
+        > a {
+            background: darken(@brand-default, 5%);
+            border-color: darken(@brand-default, 15%);
+            color: lighten(@link-color, 10%);
+            &:hover, &:focus {
+                background: @brand-default;
+                color: lighten(@link-color, 15%);
+                border-color: darken(@brand-default, 10%);
+            }
+        }
+    }
+}

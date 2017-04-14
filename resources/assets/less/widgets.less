@@ -1,0 +1,222 @@
+.widget {
+    min-height: @widget-md-height;
+    margin-bottom: @grid-gutter-width;
+    border-radius: 0;
+    position: relative;
+    > table {
+        margin-bottom: 0;
+    }
+    > .list-group {
+        margin-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        > .list-group-item {
+            border-left: 0;
+            border-right: 0;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+    .widget-header {
+        padding: @widget-md-padding;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        .widget-header-actions {
+            float: right;
+            .widget-header-action {
+                .main-transition();
+                float: left;
+                margin-right: 9px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .widget-body {
+        padding: @widget-md-padding;
+        .clearfix();
+        &.widget-body-md {
+            height: 200px;
+        }
+        &.widget-body-lg {
+            height: 326px;
+        }
+    }
+    // Widget Types
+    &.widget-achievement {
+        text-align: center;
+        .achievement-heading {
+            font-size: 30px;
+            margin-top: 0;
+            font-weight: 300;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+        .achievement-subheading {
+            font-size: 12px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        .achievement-image {
+            border-radius: 50%;
+            margin-bottom: 22px;
+        }
+        .achievement-description {
+            margin: 0;
+            font-size: 12px;
+            font-weight: 300;
+        }
+    }
+    &.widget-statistic-mini {
+        padding: 12px 17px;
+        min-height: 70px;
+        height: 70px;
+        .widget-statistic-body {
+            .widget-statistic-value {
+                position: absolute;
+                right: 30px;
+                top: 16px;
+                z-index: 35;
+                display: block;
+                color: #fff;
+                font-size: 30px;
+                line-height: 30px;
+            }
+            .widget-statistic-icon {
+                position: absolute;
+                z-index: 30;
+                left: 30px;
+                top: 16px;
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+    &.widget-statistic {
+        padding: 12px 17px;
+        .widget-statistic-header {
+            position: relative;
+            z-index: 35;
+            display: block;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .widget-statistic-body {
+            .widget-statistic-value {
+                position: relative;
+                z-index: 35;
+                display: block;
+                color: #fff;
+                font-size: 46px;
+                line-height: 46px;
+                margin-bottom: 8px;
+            }
+
+            .widget-statistic-description {
+                position: relative;
+                z-index: 35;
+                display: block;
+                font-size: 14px;
+                line-height: 14px;
+            }
+
+            .widget-statistic-icon {
+                position: absolute;
+                z-index: 30;
+                right: 30px;
+                top: 30px;
+                font-size: 70px;
+            }
+        }
+    }
+    &.widget-fluctuation {
+        .widget-fluctuation-period {
+            float: left;
+
+            .widget-fluctuation-period-text {
+                display: inline-block;
+                font-size: 16px;
+                color: darken(#fff, 20%);
+                font-weight: 300;
+                line-height: 20px;
+                margin-bottom: 9px;
+
+
+                strong {
+                    color: #fff;
+                    font-weight: 400;
+                }
+            }
+        }
+        .widget-fluctuation-description {
+            float: right;
+            text-align: center;
+            margin-top: 4px;
+            .widget-fluctuation-description-amount {
+                display: block;
+                font-size: 24px;
+                line-height: 22px;
+            }
+            .widget-fluctuation-description-text {
+                margin-top: 4px;
+                display: block;
+                color: #c2c2c2;
+                font-size: 12px;
+                line-height: 13px;
+            }
+        }
+    }
+    // Widget Variants
+    &.widget-default {
+        .widget-dark-variant(@brand-default);
+    }
+    &.widget-white {
+        .widget-light-variant(#fff);
+    }
+    &.widget-primary {
+        .widget-dark-variant(darken(@brand-primary, 8%));
+    }
+    &.widget-purple {
+        .widget-dark-variant(@brand-purple);
+    }
+    &.widget-info {
+        .widget-dark-variant(darken(@brand-info, 8%));
+    }
+    &.widget-danger {
+        .widget-dark-variant(darken(@brand-danger, 13%));
+    }
+    &.widget-success {
+        .widget-dark-variant(darken(@brand-success, 8%));
+    }
+    &.widget-warning {
+        .widget-dark-variant(darken(@brand-warning, 10%));
+    }
+    &.widget-pink {
+        .widget-dark-variant(darken(@brand-pink, 2%));
+    }
+    &.widget-faded-blue {
+        .widget-dark-variant(darken(@brand-faded-blue, 2%));
+    }
+}
+@media (max-width: 380px) {
+    .widget {
+        &.widget-fluctuation {
+            .widget-fluctuation-period {
+                float: none;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .widget-fluctuation-description {
+                float: none;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
