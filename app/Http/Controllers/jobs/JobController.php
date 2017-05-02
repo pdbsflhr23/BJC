@@ -13,4 +13,9 @@ class JobController extends Controller
 	{
 		return view('template\jobs\new_job_card');
 	}
+
+	public function new_complaint()
+	{
+		return view('template\complaints\new_complaint');
+	}
 }

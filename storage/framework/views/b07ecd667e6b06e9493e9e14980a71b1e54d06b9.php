@@ -1,6 +1,4 @@
-@extends('layout.admin')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <header class="page-header">
     <div class="container-fluid">
         <div class="row">
@@ -370,4 +368,5 @@
     </footer>
     <!-- END CONTAINER -->
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

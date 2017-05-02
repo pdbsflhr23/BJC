@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="475002934">
-    <data-source source="LOCAL" name="MySQL - admin_roles@localhost" uuid="d3d82d72-4ad4-45db-ade5-121fbfdc411d">
+  <component name="DataSourceManagerImpl" format="xml" hash="1778115809">
+    <data-source source="LOCAL" name="MySQL - bjc_laravel@localhost" uuid="d6882dc5-7e62-48e1-bb7a-ebe7f0da4dc6">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/admin_roles</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/bjc_laravel</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

@@ -25,6 +25,7 @@
 # Better Fancy-checkbox
 
 // Component Pages
+
 Route::get('/',
     [
         'uses' => 'StandardPagesController@dashboard',
@@ -248,6 +249,7 @@ Route::post('users/store', 'Auth\UsersController@store')->name('users/store');
 Route::resource('/users', 'Auth\UsersController', ['middleware' => ['role:super-admin']]);
 
 Route::get('newJob','jobs\JobController@new_job_card')->name('newJob');
+Route::get('newComplaint','jobs\JobController@new_complaint')->name('newComplaint');
 Route::get('/c', function(){
     $users = \App\User::with('role')->get();
     foreach ($users as $role){

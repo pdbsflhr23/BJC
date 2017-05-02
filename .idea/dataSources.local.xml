@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - admin_roles@localhost" uuid="d3d82d72-4ad4-45db-ade5-121fbfdc411d">
+    <data-source name="MySQL - bjc_laravel@localhost" uuid="d6882dc5-7e62-48e1-bb7a-ebe7f0da4dc6">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-pattern>admin_roles.*</schema-pattern>
-      <default-schemas>admin_roles.*</default-schemas>
+      <schema-pattern>bjc_laravel.*</schema-pattern>
+      <default-schemas>bjc_laravel.*</default-schemas>
     </data-source>
   </component>
 </project>

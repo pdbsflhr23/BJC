@@ -5,3 +5,4 @@
 <script src="{{ asset('js/varello-theme.js') }}"></script>
 <script src="{{ asset('js/icheck.min.js') }}"></script>
 <script src="{{ asset('js/dropdown.js') }}"></script>
+<script src="{{ asset('js/jobs/job.js') }}"></script>
