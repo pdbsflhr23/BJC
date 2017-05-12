@@ -242,17 +242,47 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+////////////////////////////////  ~~ Main ~~ ///////////////////////////////////
 Auth::routes();
 Route::get('/notAuthorized', 'HomeController@notAllowed');
 Route::get('users/manage/roles', 'Auth\UsersController@setRoles')->name('users/manage/roles');
 Route::post('users/store', 'Auth\UsersController@store')->name('users/store');
 Route::resource('/users', 'Auth\UsersController', ['middleware' => ['role:super-admin']]);
 
-Route::get('newJob','jobs\JobController@new_job_card')->name('newJob');
-Route::get('newComplaint','jobs\JobController@new_complaint')->name('newComplaint');
-Route::get('/c', function(){
-    $users = \App\User::with('role')->get();
-    foreach ($users as $role){
-        print_r($role);
-    }
+////////////////////////////////  ~~ Complaints ~~ ///////////////////////////////////
+Route::group(['prefix' => 'complaint'], function () {
+    Route::get('active','complaints\ComplaintController@active')->name('active');
+    Route::get('new','complaints\ComplaintController@add')->name('new');
+    Route::post('add','complaints\ComplaintController@store')->name('add');
+    Route::get('edit/{id}','complaints\ComplaintController@edit')->name('edit');
+    Route::post('update','complaints\ComplaintController@up')->name('update');
+    Route::any('delete/{id}','complaints\ComplaintController@destroy')->name('delete');
+});
+
+////////////////////////////////  ~~ NODE ~~ ///////////////////////////////////
+Route::group(['prefix' => 'node'], function () {
+    Route::get('all','Node\NodeController@view')->name('all');
+    Route::post('save','Node\NodeController@store')->name('save');
+    Route::any('edit/{id}','Node\NodeController@edit')->name('edit');
+    Route::any('update','Node\NodeController@update')->name('update');
+    Route::any('delete/{id}','Node\NodeController@destroy')->name('delete');
+});
+
+////////////////////////////////  ~~ SALES PERSON ~~ ///////////////////////////////////
+Route::group(['prefix' => 'sales/person'], function () {
+    Route::get('all','Sales\SalesPersonController@view')->name('all');
+    Route::post('save','Sales\SalesPersonController@store')->name('save');
+    Route::any('edit/{id}','Sales\SalesPersonController@edit')->name('edit');
+    Route::any('update','Sales\SalesPersonController@update')->name('update');
+    Route::any('delete/{id}','Sales\SalesPersonController@destroy')->name('delete');
+});
+
+////////////////////////////////  ~~ SALES PERSON ~~ ///////////////////////////////////
+Route::group(['prefix' => 'job'], function () {
+    Route::get('new','jobs\JobController@add')->name('new');
+    Route::post('save','jobs\JobController@store')->name('save');
+
+    // ~~~~~~~~~~~~~~~ JSON ~~~~~~~~~~~~~~~~ //
+    Route::any('json/item/price/{id}', 'jobs\JobController@itemPrice')->name('json/item/price');
+
 });

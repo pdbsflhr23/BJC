@@ -8,9 +8,12 @@
     @yield('styles')
     @include('layout.admin.meta')
 </head>
+<script>
+    var base_path = '{{'', url() }}';
+</script>
 <body {!! Session::has('skin.colour') ? 'class="skin-' . Session::get('skin.colour') . '"' : '' !!}>
     @if(config('theme.demoMode'))
-    @include('layout.demo.fixedSkinner')
+{{--    @include('layout.demo.fixedSkinner')--}}
     @endif
     <div class="notifications top-right"></div>
     <div class="wrapper">

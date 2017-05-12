@@ -2,10 +2,16 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="MySQL - bjc_laravel@localhost" uuid="d6882dc5-7e62-48e1-bb7a-ebe7f0da4dc6">
+      <database-info product="MySQL" version="5.7.14" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-pattern>bjc_laravel.*</schema-pattern>
-      <default-schemas>bjc_laravel.*</default-schemas>
+      <introspection-schemas>*:bjc_laravel</introspection-schemas>
+      <resolve-scope>*:bjc_laravel</resolve-scope>
+      <unqualified-resolve-schemas>*:bjc_laravel</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

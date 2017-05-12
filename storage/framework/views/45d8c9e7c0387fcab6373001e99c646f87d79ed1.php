@@ -8,9 +8,12 @@
     <?php echo $__env->yieldContent('styles'); ?>
     <?php echo $__env->make('layout.admin.meta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 </head>
+<script>
+    var base_path = '<?php echo e('', url()); ?>';
+</script>
 <body <?php echo Session::has('skin.colour') ? 'class="skin-' . Session::get('skin.colour') . '"' : ''; ?>>
     <?php if(config('theme.demoMode')): ?>
-    <?php echo $__env->make('layout.demo.fixedSkinner', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
     <?php endif; ?>
     <div class="notifications top-right"></div>
     <div class="wrapper">
